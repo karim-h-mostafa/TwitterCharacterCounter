@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TweetCounter</string>
+    <string name="twitter_character_count">Twitter character count</string>
+</resources>

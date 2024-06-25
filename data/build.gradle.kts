@@ -6,6 +6,9 @@ plugins {
 android {
     namespace = "com.eitadevelopment.data"
     compileSdk = 34
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         minSdk = 24
@@ -37,7 +40,12 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(project(":domain"))
+    api(libs.retrofit)
+    api(libs.converter.gson)
+    api(libs.okhttp.logging)
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
